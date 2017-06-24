@@ -56,5 +56,38 @@ int bcrandom(int *a, int *b, int *c, int *d)
     return 0;
 }
 
+int bulls_cows(int *a, int *b, int *c, int *d)
+{
+    int sc = 0;
+    int number = 0, fst, scnd, thrd, frth;
+    int bulls, cows;
+    char str[100];
+
+    while (number != (*a * 1000 + *b * 100 + *c * 10 + *d))
+    {
+        fgets(str, sizeof(str), stdin);
+        number = safe_input(str);
+        if(number > 0)
+        {
+            printf("\n");
+            fst = number / 1000;
+            scnd = number / 100 % 10;
+            thrd = number / 10 % 10;
+            frth = number % 10;
+
+            bulls = bulls_func(a, b, c, d, &fst, &scnd, &thrd, &frth);
+            cows = cows_func(a, b, c, d, &fst, &scnd, &thrd, &frth);
+            sc++;
+
+            printf("%d bulls\n", bulls);
+            printf("%d cows\n", cows);
+            printf("\n");
+            printf("\n");
+
+            if(bulls == 4)
+                break;
+            printf("Enter the four-digit celery: = ");
+        }
+    }
 
 
