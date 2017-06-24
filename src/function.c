@@ -12,6 +12,10 @@
 
 void menu()
 
+
+
+
+
 {
     system("clear");
     printf("Dobro pogalovatb v igru biki i korovi\n\n");
@@ -26,5 +30,17 @@ void menu()
         printf("Takogo punkta v menu net!\n");
         scanf("%d", &punkt);
     }
+    int a, b, c, d;
+    switch(punkt){
+        case 1:
+            system("clear");
+            bcrandom(&a, &b, &c, &d);
+            bulls_cows(&a, &b, &c, &d);
+            break;}
 
 }
+
+
+
+
+
