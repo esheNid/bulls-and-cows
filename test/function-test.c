@@ -5,6 +5,7 @@
 #define CTEST_COLOR_OK
 #include <ctest.h>
 #include "function.h"
+fl=0;
 
 CTEST(bulls, test1) 
 {    
