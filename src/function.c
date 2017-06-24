@@ -145,11 +145,18 @@ int bulls_cows(int *a, int *b, int *c, int *d)
         }
         fl=0;
     }
-    
-    printf("Pozdravliaem, vy vyigrali!!! \nKolichestvo popytok: %d \n\nVozvrashchenie v meniu...\n\n", sc);
-    sleep(2);
-    menu();
-
+    int punkt3;
+    printf("Pozdravliaem, vy vyigrali!!! \nKolichestvo popytok: %d \n\nVozvrashchenie v meniu 1, vihod 2\n\n", sc);
+    scanf("%d", &punkt3);
+    switch(punkt3)
+            {
+                case 1:
+                	fl=1;
+                    menu();
+                    break;
+                case 2:
+                    _Exit (EXIT_SUCCESS);
+            }
     return 0;
 
 }
