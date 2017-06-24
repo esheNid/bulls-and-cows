@@ -136,6 +136,15 @@ int bulls_cows(int *a, int *b, int *c, int *d)
             printf("Enter the four-digit celery: = ");
         }
     }
+    
+    printf("Поздравляем, вы выиграли!\nКоличество попыток: %d!\n\nВозвращение в меню...\n\n", sc);
+    sleep(2);
+    menu();
+
+    return 0;
+
+}
+
 int bulls_func(int *a, int *b, int *c, int *d, int *fst, int *scnd, int *thrd, int *frth)
 {
     int bulls = 0;
@@ -167,3 +176,4 @@ int cows_func(int *a, int *b, int *c, int *d, int *fst, int *scnd, int *thrd, in
 
     return cows;
 }
+
