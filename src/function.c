@@ -33,18 +33,6 @@ void menu()
             bcrandom(&a, &b, &c, &d);
             bulls_cows(&a, &b, &c, &d);
             break;
-	}
-            
-
-}
-
- int a, b, c, d;
-    switch(punkt){
-        case 1:
-            system("clear");
-            bcrandom(&a, &b, &c, &d);
-            bulls_cows(&a, &b, &c, &d);
-            break;
         case 2:
             system("clear");
             printf("Pravila igri: ");
@@ -69,6 +57,7 @@ void menu()
             _Exit (EXIT_SUCCESS);
             break;
     }
+    
 }
 
 int safe_input(char *str)
