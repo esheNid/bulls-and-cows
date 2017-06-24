@@ -38,6 +38,39 @@ void menu()
 
 }
 
+ int a, b, c, d;
+    switch(punkt){
+        case 1:
+            system("clear");
+            bcrandom(&a, &b, &c, &d);
+            bulls_cows(&a, &b, &c, &d);
+            break;
+        case 2:
+            system("clear");
+            printf("Pravila igri: ");
+            printf("Kompiuter zadumyvaet chetyrekhznachnoe chislo Tsifry v chisle ne povtoriaiutsia, \n");
+            printf("0 mozhet stoiat na pervom meste.\n");
+            printf("Igrok delaet khody chtoby uznat eto chislo. \n");
+            printf("V otvet na kazhdyi khod kompiuter pokazyvaet chislo otgadannykh tsifr,\n");
+            printf("stoiashchikh na svoikh mestakh (chislo bykov) i chislo otgadannykh tsifr, \n");
+            printf("stoiashchikh ne na svoikh mestakh ()chislo korov).\n\n");
+            printf("Vernutsia v meniu 1 - da, 2 - Vykhod iz igry\n");
+            scanf("%d", &punkt2);
+
+            switch(punkt2)
+            {
+                case 1:
+                    menu();
+                    break;
+                case 2:
+                    _Exit (EXIT_SUCCESS);
+            }
+        case 3:
+            _Exit (EXIT_SUCCESS);
+            break;
+    }
+}
+
 int safe_input(char *str)
 {
     int test, number;
@@ -124,7 +157,7 @@ int bulls_cows(int *a, int *b, int *c, int *d)
         fl=0;
     }
     
-    printf("Поздравляем, вы выиграли!\nКоличество попыток: %d!\n\nВозвращение в меню...\n\n", sc);
+    printf("Pozdravliaem, vy vyigrali!!! \nKolichestvo popytok: %d \n\nVozvrashchenie v meniu...\n\n", sc);
     sleep(2);
     menu();
 
