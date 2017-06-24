@@ -27,11 +27,11 @@ CTEST(cows, test1)
 
 CTEST(bulls, test2) 
 {    
-    int a = 1, b = 2, c = 3, d = 4, fst = 1, scnd = 2, thrd = 3, frth = 4;
+    int a = 1, b = 2, c = 3, d = 4, fst = 1, scnd = 2, thrd = 3, frth = 0;
     
     int const result = bulls_func(&a, &b, &c, &d, &fst, &scnd, &thrd, &frth);
     
-    ASSERT_EQUAL(4, result);
+    ASSERT_EQUAL(3, result);
 }
 
 CTEST(cows, test2) 
@@ -43,3 +43,24 @@ CTEST(cows, test2)
     
     ASSERT_EQUAL(3, result);
 }
+
+CTEST(bulls, test3) 
+{    
+
+    int a = 1, b = 2, c = 3, d = 4, fst = 5, scnd = 6, thrd = 7, frth = 8;
+    
+    int const result = bulls_func(&a, &b, &c, &d, &fst, &scnd, &thrd, &frth);
+    
+    ASSERT_EQUAL(0, result);
+}
+
+CTEST(cows, test3) 
+{    
+
+    int a = 6, b = 7, c = 8, d = 9, fst = 9, scnd = 8, thrd = 7, frth = 6;
+    
+    int const result = cows_func(&a, &b, &c, &d, &fst, &scnd, &thrd, &frth);
+    
+    ASSERT_EQUAL(4, result);
+}
+
