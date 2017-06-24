@@ -5,3 +5,12 @@
 #define CTEST_COLOR_OK
 #include <ctest.h>
 #include "function.h"
+
+CTEST(validation, test1) 
+{    
+    char str[100] = {1};
+    
+    int const result = safe_input(str);
+    
+    ASSERT_EQUAL(0, result);
+}
