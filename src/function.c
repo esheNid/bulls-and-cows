@@ -89,5 +89,20 @@ int bulls_cows(int *a, int *b, int *c, int *d)
             printf("Enter the four-digit celery: = ");
         }
     }
+int bulls_func(int *a, int *b, int *c, int *d, int *fst, int *scnd, int *thrd, int *frth)
+{
+    int bulls = 0;
+
+    if (*fst == *a)
+        bulls++;
+    if (*scnd == *b)
+        bulls++;
+    if (*thrd == *c)
+        bulls++;
+    if (*frth == *d)
+        bulls++;
+
+    return bulls;
+}
 
 
