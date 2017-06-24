@@ -57,7 +57,6 @@ void menu()
             _Exit (EXIT_SUCCESS);
             break;
     }
-    return 0;
 }
 
 int safe_input(char *str)
