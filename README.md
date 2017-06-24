@@ -1,3 +1,4 @@
-# Курсовои проект по ТРПО
-Тема "Быки и коровы"
-[![Build Status](https://travis-ci.org/esheNid/bulls-and-cows.svg?branch=master)](https://travis-ci.org/esheNid/bulls-and-cows)
+# РљСѓСЂСЃРѕРІРѕРё РїСЂРѕРµРєС‚ РїРѕ РўР РџРћ
+С‚РµРјР° "Р‘С‹РєРё Рё РєРѕСЂРѕРІС‹"
+
+  [![Build Status](https://travis-ci.org/esheNid/bulls-and-cows.svg?branch=master)](https://travis-ci.org/esheNid/bulls-and-cows)
