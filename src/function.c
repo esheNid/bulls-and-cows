@@ -40,7 +40,21 @@ void menu()
 
 }
 
+int bcrandom(int *a, int *b, int *c, int *d)
+{
+    srand(time(NULL));
+    do
+    {
+        *a = 0 + rand() % 9;
+        *b = 0 + rand() % 9;
+        *c = 0 + rand() % 9;
+        *d = 0 + rand() % 9;
+    } while (*d == *a || *d == *b || *d == *c || *c == *a || *c == *b || *b == *a);
 
+    printf("Rand number %d%d%d%d\n", *a, *b, *c, *d);
+
+    return 0;
+}
 
 
 
