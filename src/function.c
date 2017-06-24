@@ -7,23 +7,18 @@
 #include <unistd.h>
 
 
-
-
+int fl=1;
 
 void menu()
-
-
-
-
-
 {
-    system("clear");
+    system("cls");
     printf("Dobro pogalovatb v igru biki i korovi\n\n");
     printf("1. Naiti igru\n");
     printf("2. Pravila igri\n");
     printf("3. Vihod\n");
     int punkt2;
     int punkt;
+    
     scanf("%d", &punkt);
     if(punkt != 1 && punkt != 2 && punkt != 3)
     {
@@ -31,12 +26,15 @@ void menu()
         scanf("%d", &punkt);
     }
     int a, b, c, d;
-    switch(punkt){
+    switch(punkt)
+	{
         case 1:
-            system("clear");
+            system("cls");
             bcrandom(&a, &b, &c, &d);
             bulls_cows(&a, &b, &c, &d);
-            break;}
+            break;
+	}
+            
 
 }
 
@@ -47,20 +45,7 @@ int safe_input(char *str)
     test = atoi(str);
 
     printf("\n");
-
-    if(str[2] == 0 || str[3] == 0)
-    {
-        if(str[0] == 0 || str[1] == 0)
-        {
-            printf("Enter the four-digit celery: = ");
-            return 0;
-        }
-        printf("Incorrect input! Please check rules\n");
-        printf("Enter the four-digit celery: = ");
-        return 0;
-    }
-
-
+    if(fl!=1){
     if(test > 10000 || test < 100)
     {
         printf("Incorrect input! Please check rules\n");
@@ -85,6 +70,7 @@ int safe_input(char *str)
         printf("Enter the four-digit celery: = ");
         return 0;
       }
+	}
 }
 
 int bcrandom(int *a, int *b, int *c, int *d)
@@ -114,7 +100,7 @@ int bulls_cows(int *a, int *b, int *c, int *d)
     {
         fgets(str, sizeof(str), stdin);
         number = safe_input(str);
-        if(number > 0)
+        if((number > 0) && (fl!=1))
         {
             printf("\n");
             fst = number / 1000;
@@ -135,6 +121,7 @@ int bulls_cows(int *a, int *b, int *c, int *d)
                 break;
             printf("Enter the four-digit celery: = ");
         }
+        fl=0;
     }
     
     printf("Поздравляем, вы выиграли!\nКоличество попыток: %d!\n\nВозвращение в меню...\n\n", sc);
