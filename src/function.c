@@ -40,6 +40,53 @@ void menu()
 
 }
 
+int safe_input(char *str)
+{
+    int test, number;
+
+    test = atoi(str);
+
+    printf("\n");
+
+    if(str[2] == 0 || str[3] == 0)
+    {
+        if(str[0] == 0 || str[1] == 0)
+        {
+            printf("Enter the four-digit celery: = ");
+            return 0;
+        }
+        printf("Incorrect input! Please check rules\n");
+        printf("Enter the four-digit celery: = ");
+        return 0;
+    }
+
+
+    if(test > 10000 || test < 100)
+    {
+        printf("Incorrect input! Please check rules\n");
+        printf("Enter the four-digit celery: = ");
+        return 0;
+    }
+
+    if(str[0] == str[1] || str[0] == str[2] || str[0] == str[3] || str[1] == str[2] || str[1] == str[3] || str[2] == str[3])
+    {
+        printf("Incorrect input! Please check rules\n");
+        printf("Enter the four-digit celery: = ");
+        return 0;
+    }
+
+    if(isdigit(str[0]) && isdigit(str[1]) && isdigit(str[2]) && isdigit(str[3]))
+    {
+        number = atoi(str);
+        return number;
+    } else
+      {
+        printf("Incorrect input! Please check rules\n");
+        printf("Enter the four-digit celery: = ");
+        return 0;
+      }
+}
+
 int bcrandom(int *a, int *b, int *c, int *d)
 {
     srand(time(NULL));
