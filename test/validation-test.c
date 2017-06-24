@@ -14,3 +14,21 @@ CTEST(validation, test1)
     
     ASSERT_EQUAL(0, result);
 }
+
+CTEST(validation, test2) 
+{    
+    char str[100] = {'v'};
+    
+    int const result = safe_input(str);
+    
+    ASSERT_EQUAL(0, result);
+}
+
+CTEST(validation, test3) 
+{    
+    char str[100] = {1, 'a', '3', '4'};
+    
+    int const result = safe_input(str);
+    
+    ASSERT_EQUAL(0, result);
+}
