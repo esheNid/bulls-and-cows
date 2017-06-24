@@ -34,7 +34,7 @@ void menu()
             bulls_cows(&a, &b, &c, &d);
             break;
         case 2:
-            system("clear");
+            system("cls");
             printf("Pravila igri: ");
             printf("Kompiuter zadumyvaet chetyrekhznachnoe chislo Tsifry v chisle ne povtoriaiutsia, \n");
             printf("0 mozhet stoiat na pervom meste.\n");
