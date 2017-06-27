@@ -38,4 +38,8 @@ $(OBJ_TEST): $(BUILD_DIR_TEST)/%.o : $(SRC_DIR_TEST)/%.c
 	@$(CC) -I $(SRC_DIR) -I thirdparty -c $< $(CFLAG) $@
 
 .PHONY: testing
-testing: $(TARGET_TEST)	
+testing:
+	$(TARGET_TEST)
+
+
+
