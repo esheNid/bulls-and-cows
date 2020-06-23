@@ -10,3 +10,8 @@ int main(int argc, const char *argv[])
 { 
     return ctest_main(argc, argv);
 }
+
+int some_of_test()
+{
+	return 1;
+}
